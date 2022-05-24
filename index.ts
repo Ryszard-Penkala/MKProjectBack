@@ -19,11 +19,6 @@ app.use(rateLimit({
 //Routes...
 app.use('/ad', adRouter);
 
-app.get('/', async (req, res) => {
-    throw new ValidationError('Damn');
-});
-
-
 app.use(handleError);
 
 app.listen(3001, '0.0.0.0', ()=>{

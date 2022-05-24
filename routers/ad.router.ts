@@ -7,7 +7,7 @@ export const adRouter = Router()
 
         const ads = await AdRecord.findAll(req.params.name ?? '');
 
-        res.json({ads});
+        res.json(ads);
     })
 
     .get('/:id', async (req, res)=>{
